@@ -51,10 +51,8 @@ function generatePassword(howMany, letLow, letUp, numb, char) {
 
 // Write password to the #password input
 function writePassword() {
-
   var password = generatePassword(howManyChar, userLowerLetters, userUpperLetters, userNumbers, userSpecialChar);
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
 }
 
