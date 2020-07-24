@@ -16,37 +16,44 @@ function generatePassword(howMany, letLow, letUp, numb, char) {
   var myArray = [];
   var result = [];
 
-  if (howMany >= 8 && howMany <= 128) {
-    if (letLow === true) {
-      for (var i = 0; i < lettersLower.length; i++) {
-        myArray.push(lettersLower[i]);
-      }
-    }
-    if (letUp === true) {
-      for (var i = 0; i < lettersUpper.length; i++) {
-        myArray.push(lettersUpper[i]);
-      }
-    }
-    if (numb === true) {
-      for (var i = 0; i < numbers.length; i++) {
-        myArray.push(numbers[i]);
-      }
-    }
-    if (char === true) {
-      for (var i = 0; i < specialChar.length; i++) {
-        myArray.push(specialChar[i]);
-      }
-    }
-    for (var i = 0; i < howMany; i++) {
-      var randomNum = Math.floor(Math.random() * myArray.length);
-      result.push(myArray[randomNum]);
-    }
-    
+  if (letUp === false && letLow === false && numb === false && char === false) {
+    alert("Please select at least one character type.");
+    return location.reload();
   } else {
-    alert("Please enter between 8 and 128 characters!")
-    return location.reload()
+
+
+    if (howMany >= 8 && howMany <= 128) {
+      if (letLow === true) {
+        for (var i = 0; i < lettersLower.length; i++) {
+          myArray.push(lettersLower[i]);
+        }
+      }
+      if (letUp === true) {
+        for (var i = 0; i < lettersUpper.length; i++) {
+          myArray.push(lettersUpper[i]);
+        }
+      }
+      if (numb === true) {
+        for (var i = 0; i < numbers.length; i++) {
+          myArray.push(numbers[i]);
+        }
+      }
+      if (char === true) {
+        for (var i = 0; i < specialChar.length; i++) {
+          myArray.push(specialChar[i]);
+        }
+      }
+      for (var i = 0; i < howMany; i++) {
+        var randomNum = Math.floor(Math.random() * myArray.length);
+        result.push(myArray[randomNum]);
+      }
+    
+    } else {
+      alert("Please enter between 8 and 128 characters!")
+      return location.reload()
+    }
+    return result.join("");
   }
-  return result.join("");
 }
 
 // Write password to the #password input
