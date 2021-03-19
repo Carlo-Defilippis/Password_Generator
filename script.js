@@ -60,7 +60,7 @@ $(document).ready(function () {
   
     if (letUp === false && letLow === false && numb === false && char === false) {
       alert("Please select at least one character type.");
-      return
+      return location.reload()
     } else {
       if (howMany >= 8 && howMany <= 25) {
         if (letLow === true) {
@@ -89,7 +89,7 @@ $(document).ready(function () {
         }
       } else {
         alert("Please enter between 8 and 128 characters!");
-        return  
+        return location.reload()
       }
       $(".loading").fadeIn(50).fadeOut(2000)
       return result.join("");
