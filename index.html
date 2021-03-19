@@ -1,34 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Password Generator</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Password Generator</h1>
-      </header>
-      <div class="card">
-        <div class="card-header">
-          <h2>Generate a Password</h2>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+
+<body>
+  <div class="jumbotron">
+    <a class="btn btn-primary btn-lg ml-3" href="https://carlo-defilippis.github.io/100-days-of-code/"
+      role="button">Main Page</a>
+    <h1 class="display-4 text-center">Password Generator</h1>
+    <p class="lead text-center">Password Generator that records data of money spent and paid,
+      and if the user is offline its saves your user inputs and it then adds the data to the database when
+      it is back online.</p>
+    <p class="text-center">Day 28 of "100 days of coding".</p>
+    <hr class="my-4">
+    <p></p>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+      </div>
+      <div class="card col-sm-8 mx-auto">
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">How many characters?</label>
+          </div>
+          <select class="custom-select" id="inputGroupSelect01">
+            <option selected>Choose...</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+          </select>
         </div>
-        <div class="card-body">
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
+
+        <div class="form-check mx-auto">
+          <input class="form-check-input lowerCase" type="checkbox" value="" id="defaultCheck1">
+          <label class="form-check-label" for="defaultCheck1">
+            Include lower case letters?
+          </label>
         </div>
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
+        <div class="form-check mx-auto">
+          <input class="form-check-input upperCase" type="checkbox" value="" id="defaultCheck1">
+          <label class="form-check-label" for="defaultCheck2">
+            Include upper case letters?
+          </label>
+        </div>
+        <div class="form-check mx-auto">
+          <input class="form-check-input numbers" type="checkbox" value="" id="defaultCheck1">
+          <label class="form-check-label" for="defaultCheck2">
+            Include numbers?
+          </label>
+        </div>
+        <div class="form-check mx-auto">
+          <input class="form-check-input specialChar" type="checkbox" value="" id="defaultCheck1">
+          <label class="form-check-label" for="defaultCheck2">
+            Include special characters?
+          </label>
         </div>
       </div>
+      <div class="col-sm">
+      </div>
     </div>
-    <script src="script.js"></script>
-  </body>
+  </div>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+      </div>
+      <div class="card col-sm-8 mx-auto">
+        <h4 class="loading text-success mx-auto">Generating Password!</h4>
+        <div class="card-header mx-auto">
+        </div>
+
+        <div class="input-group card-body mx-auto">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Generated Password: </span>
+          </div>
+          <textarea readonly id="password" placeholder="Your Secure Password will appear here" class="form-control"
+            aria-label="Generated Password"></textarea>
+        </div>
+
+        <div class="card-footer mx-auto">
+          <button id="generate" class="btn btn-primary">Generate Password</button>
+        </div>
+      </div>
+
+      <div class="col-sm">
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
 </html>
