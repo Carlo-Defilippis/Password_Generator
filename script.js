@@ -56,7 +56,6 @@ $(document).ready(function () {
       userSpecialChar = false
     }
   })
-  // User Prompts
   
   
   
@@ -115,8 +114,9 @@ $(document).ready(function () {
     var passwordText = document.querySelector("#password");
     if (passwordText.value === '') {
       return
+    } else {
+      passwordText.value = password;
     }
-    passwordText.value = password;
   }
   
   // Add event listener to generate button
