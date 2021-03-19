@@ -106,7 +106,7 @@ $(document).ready(function () {
       userSpecialChar
     );
     var passwordText = document.querySelector("#password");
-    if (passwordText.value === '') {
+    if (password === '') {
       return
     } else {
       return passwordText.value = password;
