@@ -8,7 +8,7 @@ $(document).ready(function () {
   var lettersUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
   var specialChar = "!#$%&*+<=>?@/[]^_`|~".split("");
   
-  console.log(lettersLower);
+
   
   let howManyChar = 0
   let userLowerLetters = false
@@ -18,11 +18,9 @@ $(document).ready(function () {
 
   $('.custom-select').on('click', function() {
     howManyChar = $(this).val();
-    console.log(howManyChar)
   })
   // Check is user wants lower case letters
   $('.lowerCase').on('click', function() {
-    console.log(userLowerLetters)
     if($('.lowerCase').prop('checked')) {
       userLowerLetters = true
     } else {
@@ -31,7 +29,6 @@ $(document).ready(function () {
   })
   // checks if user wants upp case letters
   $('.upperCase').on('click', function() {
-    console.log(userLowerLetters)
     if($('.upperCase').prop('checked')) {
       userUpperLetters = true
     } else {
@@ -40,7 +37,6 @@ $(document).ready(function () {
   })
   // checks if user wants numbers
   $('.numbers').on('click', function() {
-    console.log(userLowerLetters)
     if($('.numbers').prop('checked')) {
       userNumbers = true
     } else {
@@ -49,7 +45,6 @@ $(document).ready(function () {
   })
   // checks if user wants special characters
   $('.specialChar').on('click', function() {
-    console.log(userLowerLetters)
     if($('.specialChar').prop('checked')) {
       userSpecialChar = true
     } else {
@@ -60,7 +55,6 @@ $(document).ready(function () {
   
   
   function generatePassword(howMany, letLow, letUp, numb, char) {
-    console.log(howManyChar, userLowerLetters, userUpperLetters, userNumbers, userSpecialChar)
     var myArray = [];
     var result = [];
   
