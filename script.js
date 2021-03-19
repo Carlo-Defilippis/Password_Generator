@@ -109,7 +109,7 @@ $(document).ready(function () {
     if (passwordText.value === '') {
       return
     } else {
-      passwordText.value = password;
+      return passwordText.value = password;
     }
   }
   
